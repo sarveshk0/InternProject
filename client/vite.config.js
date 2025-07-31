@@ -7,6 +7,6 @@ export default defineConfig({
   plugins: [react(), tailwindcss() ],
   server:{
     host: true,
-    allowedHosts: "internproject-frontend.onrender.com",
+    allowedHosts:  "internproject-fronted.onrender.com" ,
   }
 })

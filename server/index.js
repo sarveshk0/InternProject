@@ -13,8 +13,9 @@ dotenv.config();
 const PORT = process.env.PORT || 4000;
 
 const allowedOrigins = [
- 
-  "https://internproject-frontend.onrender.com",
+   "internproject-frontend.onrender.com",
+  "http://localhost:5173",
+  "https://internproject-frontend.onrender.com"
 ];
 
 app.use(cors({
