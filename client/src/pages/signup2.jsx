@@ -27,7 +27,7 @@ const Signup2 = () => {
     setLoading(true);
 
     try {
-      const response = await fetch("http://localhost:4000/api/signup2", {
+      const response = await fetch(`${import.meta.env.VITE_BACKEND_URL}/api/signup2`, {
         method: "POST",
         headers: { "Content-Type": "application/json" },
         body: JSON.stringify({
@@ -59,7 +59,7 @@ const Signup2 = () => {
     setResendStatus("");
 
     try {
-      const response = await fetch("http://localhost:4000/api/resend-otp", {
+      const response = await fetch(`${import.meta.env.VITE_BACKEND_URL}/api/resend-otp`, {
         method: "POST",
         headers: { "Content-Type": "application/json" },
         body: JSON.stringify({ email: formData.email }),

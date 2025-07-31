@@ -16,7 +16,7 @@ const Dashboard = () => {
       setLoading(true);
       setError(null);
       try {
-        const response = await fetch("http://localhost:4000/api/dashboard", {
+        const response = await fetch(`${import.meta.env.VITE_BACKEND_URL}/api/dashboard`, {
           method: "GET",
           credentials: "include",
           headers: {
@@ -56,7 +56,7 @@ const Dashboard = () => {
   const handleDeleteNote = async (noteId) => {
     try {
       const response = await fetch(
-        `http://localhost:4000/api/notes/deletenotes/${noteId}`,
+        `${import.meta.env.VITE_BACKEND_URL}/api/notes/deletenotes/${noteId}`,
         {
           method: "DELETE",
           headers: {
@@ -82,7 +82,7 @@ const Dashboard = () => {
   const handleCreateNote = async (e) => {
     e.preventDefault();
     try {
-      const response = await fetch("http://localhost:4000/api/notes/createnotes", {
+      const response = await fetch(`${import.meta.env.VITE_BACKEND_URL}/api/notes/createnotes`, {
         method: "POST",
         headers: {
           "Content-Type": "application/json",
