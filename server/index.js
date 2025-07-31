@@ -13,7 +13,7 @@ dotenv.config();
 const PORT = process.env.PORT || 4000;
 
 const allowedOrigins = [
-   "internproject-frontend.onrender.com",
+  "https://intern-project-ebon.vercel.app",
   "http://localhost:5173",
   "https://internproject-frontend.onrender.com"
 ];
