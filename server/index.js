@@ -18,13 +18,15 @@ const allowedOrigins = [
   "https://internproject-frontend.onrender.com"
 ];
 
+
 app.use(cors({
   origin: function (origin, callback) {
-    if (!origin || allowedOrigins.includes(origin)) {
-      callback(null, true);
-    } else {
-      callback(new Error("Not allowed by CORS"));
+    
+    if (!origin) return callback(null, true);
+    if (allowedOrigins.includes(origin)) {
+      return callback(null, true);
     }
+    return callback(new Error("Not allowed by CORS: " + origin));
   },
   credentials: true
 }));
@@ -32,6 +34,7 @@ app.use(cors({
 app.use(cookieParser());
 // Database connect
 database.connect();
+app.use(express.json());
 
 // Middlewares
 app.use((req, res, next) => {
