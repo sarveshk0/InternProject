@@ -15,14 +15,14 @@ function App() {
       <Route path="/signin" element={<Signin />} />
 
       {/* Private route for dashboard */}
-      <Route>
-        path="/dashboard"
+      <Route
+       path="/dashboard"
         element={
           <PrivateRoute>
             <Dashboard />
           </PrivateRoute>
         }
-      </Route>
+      />
     </Routes>
   )
 }
