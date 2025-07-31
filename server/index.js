@@ -13,8 +13,7 @@ dotenv.config();
 const PORT = process.env.PORT || 4000;
 
 const allowedOrigins = [
-  "http://localhost:3000",
-  "http://localhost:5173",
+ 
   "https://internproject-frontend.onrender.com",
 ];
 
